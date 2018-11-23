@@ -1,0 +1,42 @@
+﻿<Window x:Class="GoogleCloudVisionTest.CaptureWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GoogleCloudVisionTest"
+        mc:Ignorable="d"
+        Title="CaptureWindow" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="CanResize" Topmost="True"
+        BorderBrush="Black" BorderThickness ="1"
+        >
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="1" CornerRadius="2" ResizeBorderThickness="10" GlassFrameThickness="0"></WindowChrome>
+    </WindowChrome.WindowChrome>
+    <Grid Loaded="Grid_Loaded" x:Name="MainGrid">
+        <Rectangle x:Name="titleBar" HorizontalAlignment="Stretch" Height="35" VerticalAlignment="Top" Fill="white"/>
+        <Rectangle x:Name="CropCapture_Window" VerticalAlignment="Stretch" Fill="Transparent" Margin="0,35,0,30" Stroke="LightBlue" StrokeThickness="5" SizeChanged="CropCapture_Window_SizeChanged"/>
+        <Label x:Name="title_label" Content="CaptureWindow" Height="30" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,2.5,0,0" FontSize="15"/>
+        <Button x:Name="close_button" HorizontalAlignment="Right" Height="25" VerticalAlignment="Top" Width="25" Margin="0,5,10,0" Click="close_button_Click" Background="Transparent" BorderThickness="0"
+                ToolTip="창 닫기" ToolTipService.InitialShowDelay="0">
+            <Image Source="Resources/close-button.png"></Image>
+        </Button>
+        <Rectangle x:Name="bottmBar" HorizontalAlignment="Stretch" Height="30" VerticalAlignment="Bottom" Fill="white"/>
+        
+        
+        <Button x:Name="find_window_button" HorizontalAlignment="Right" Height="25" VerticalAlignment="Bottom" Width="25" Margin="0,0,190,2.5"  PreviewMouseUp="find_window_button_PreviewMouseUp" PreviewMouseMove="find_window_button_PreviewMouseMove" PreviewMouseDown="find_window_button_PreviewMouseDown" Background="Transparent" BorderThickness="0"
+                ToolTip="창 맞춤(클릭 후 드래그하여 창위에 놓으세요)" ToolTipService.InitialShowDelay="0">
+            <Image Source="Resources/add-square-button.png"></Image>
+        </Button>
+        <TextBox x:Name="width_textBox" HorizontalAlignment="Right" Height="25" Width="40"  Margin="0,0,145,2.5" TextWrapping="Wrap" Text="0" TextAlignment="Center" VerticalAlignment="Bottom" IsReadOnly="True" ToolTip="너비" ToolTipService.InitialShowDelay="0" VerticalContentAlignment="Center"/>
+        <Label x:Name="x_label" Content="X" Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,123,2" FontSize="10" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="height_textBox" HorizontalAlignment="Right" Height="25" Width="40"  Margin="0,0,85,2.5" TextWrapping="Wrap" Text="0" TextAlignment="Center" VerticalAlignment="Bottom" IsReadOnly="True" ToolTip="높이" ToolTipService.InitialShowDelay="0" VerticalContentAlignment="Center"/>
+        <Label x:Name="px_label" Content="px" Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,60,2" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="capture_button" HorizontalAlignment="Right" Height="25" VerticalAlignment="Bottom" Width="25" Margin="0,0,34,2.5"  Click="capture_button_Click" Background="Transparent" BorderThickness="0"
+                ToolTip="선택화면 캡쳐" ToolTipService.InitialShowDelay="0">
+            <Image Source="Resources/camera-diaphragm.png"></Image>
+        </Button>
+        <Button x:Name="all_capture_button" HorizontalAlignment="Right" Height="27" VerticalAlignment="Bottom" Width="27" Margin="0,0,5,2.5"  Click="all_capture_button_Click" Background="Transparent" BorderThickness="0"
+                ToolTip="전체화면 캡쳐" ToolTipService.InitialShowDelay="0">
+            <Image Source="Resources/photo-camera-outline.png"></Image>
+        </Button>
+    </Grid>
+</Window>
