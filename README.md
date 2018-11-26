@@ -5,7 +5,6 @@
 클라우드비전 코드는 MainWindow, 스크린캡쳐 코드는 CaptureWindow에 위치하고 있습니다.
 
 ## 1. GoogleCloudVisionAPI
-<hr/>
 구글 클라우드 비전 서비스는 아래 링크를 거의 참고했습니다.
 
 https://github.com/dang-gun/GoogleVisionAPITest0001
@@ -18,7 +17,6 @@ MainWindow.xaml.cs의 72번째줄에서 자신의 계정키로 생성된 json파
 API 및 서비스의 대시보드에서 요청수 및 지연시간을 체크할 수 있습니다.
 
 ## 2. ScreenCapture
-<hr/>
 
 스크린 캡쳐의 끌어서 창맞추기 기능과 UI는 아래 프로그램을 많이 참고했습니다.
 
