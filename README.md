@@ -1,4 +1,4 @@
-# GoogleCloudVisionAPI * ScreenCapture
+# GoogleCloudVisionAPI & ScreenCapture
 
 구글의 클라우드비전 서비스를 테스트하면서 스크린캡쳐 기능도 만들어보았습니다.
 
